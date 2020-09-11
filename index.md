@@ -1,30 +1,13 @@
-## Hey, I'm Apu 👋
+## Hey folks, I'm Apu 👋
 
-You can use the [editor on GitHub](https://github.com/apuchitnis/apuchitnis.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Engineer by day 🛠, stand-up comedian by night 🎙
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+I'm currently building a [startup](https://sidetrack.tech) at [Entrepreneur First](https://joinef.com). Stay tuned for details! 👀
 
-### Markdown
+Find my favourite programming memes on [Twitter](https://twitter.com/apuchitnis), or connect with me on [LinkedIn](https://www.linkedin.com/in/apuchitnis)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+I formerly led engineering teams at [Improbable](http://improbable.io/) and studied engineering at Cambridge.
 
-```markdown
-Syntax highlighted code block
+I love to help people out where I can, and especially enjoy mentoring underrepresented folks. Get in [touch](https://calendly.com/apuchitnis) if you want to chat! 🗣
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-[Link](url) and ![Image](images/apu.jpg)
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+![Me](images/apu.jpg)
