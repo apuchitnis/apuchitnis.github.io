@@ -11,3 +11,14 @@ I formerly led engineering teams at [Improbable](http://improbable.io/) and stud
 I love to help people out where I can, and especially enjoy mentoring underrepresented folks. Get in [touch](https://calendly.com/apuchitnis) if you want to chat! 🗣
 
 ![Me](images/apu.jpg)
+
+
+
+```
+           _.====.._
+         ,:._       ~-_
+             `\        ~-_
+               | _  _  |  `.
+             ,/ /_)/ | |    ~-_
+    -..__..-''  \_ \_\ `_      ~~--..__...----... THANK YOU FOR SCROLLING. HERE'S A WAVE.
+```
