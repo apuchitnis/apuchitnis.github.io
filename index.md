@@ -25,6 +25,6 @@ Syntax highlighted code block
 
 [Link](url) and ![Image](src)
 ```
-[Link](url) and ![Image](images/apu)
+[Link](url) and ![Image](images/apu.jpg)
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
