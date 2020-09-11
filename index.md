@@ -4,11 +4,11 @@ Engineer by day 🛠, stand-up comedian by night 🎙
 
 I'm currently building a [startup](https://sidetrack.tech) at [Entrepreneur First](https://joinef.com). Stay tuned for details! 👀
 
-Find my favourite programming memes on [Twitter](https://twitter.com/apuchitnis), or connect with me on [LinkedIn](https://www.linkedin.com/in/apuchitnis)
+Find my favourite programming memes on [Twitter](https://twitter.com/apuchitnis), or connect with me on [LinkedIn](https://www.linkedin.com/in/apuchitnis).
 
-I formerly led engineering teams at [Improbable](http://improbable.io/) and studied engineering at Cambridge.
+I formerly led teams at [Improbable](http://improbable.io/) and studied engineering at Cambridge.
 
-I love to help people out where I can, and especially enjoy mentoring underrepresented folks. Get in [touch](https://calendly.com/apuchitnis) if you want to chat! 🗣
+I love to help where I can, and especially enjoy mentoring folks who are underrepresented or early-career. Get in [touch](https://calendly.com/apuchitnis) if you want to chat! 🗣
 
 ![Me](images/apu.jpg)
 
