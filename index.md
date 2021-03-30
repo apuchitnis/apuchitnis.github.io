@@ -4,7 +4,9 @@ Engineer by day 🛠, stand-up comedian by night 🎙
 
 I'm currently building a [startup](https://sidetrack.tech) at [Entrepreneur First](https://joinef.com). Stay tuned for details! 👀
 
-Find my favourite programming memes on [Twitter](https://twitter.com/apuchitnis), or connect with me on [LinkedIn](https://www.linkedin.com/in/apuchitnis).
+I like hacking on side projects in my spare time: [🥗Seasonal Foods](https://twitter.com/seasonalfoods3).
+
+Find my favourite programming memes on [Twitter](https://twitter.com/apuchitnis), or on [LinkedIn](https://www.linkedin.com/in/apuchitnis).
 
 I formerly led teams at [Improbable](http://improbable.io/) and studied engineering at Cambridge.
 
