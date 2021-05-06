@@ -5,8 +5,9 @@ Engineer by day 🛠, stand-up comedian by night 🎙
 I'm currently building a [startup](https://sidetrack.tech) at [Entrepreneur First](https://joinef.com). Stay tuned for details! 👀
 
 I like hacking on side projects in my spare time:
-* [🥗Seasonal Foods](https://twitter.com/seasonalfoods3).
-* [⏰ProgressBar](http://progressbarwindows.com).
+* [🥗 Seasonal Foods](https://twitter.com/seasonalfoods3).
+* [⏰ ProgressBar](http://progressbarwindows.com).
+* [🎙 Open Mic Nights](https://apuchitnis.github.io/open-mic-nights).
 
 Find my favourite programming memes on [Twitter](https://twitter.com/apuchitnis), or on [LinkedIn](https://www.linkedin.com/in/apuchitnis).
 
