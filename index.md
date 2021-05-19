@@ -2,12 +2,12 @@
 
 Engineer by day 🛠, stand-up comedian by night 🎙
 
-I'm currently building a [startup](https://sidetrack.tech) at [Entrepreneur First](https://joinef.com). Stay tuned for details! 👀
+I'm currently building a something new 😃. Stay tuned for details! 👀
 
 I like hacking on side projects in my spare time:
-* [🥗 Seasonal Foods](https://twitter.com/seasonalfoods3).
-* [⏰ ProgressBar](http://progressbarwindows.com).
-* [🎙 Open Mic Nights](https://apuchitnis.github.io/open-mic-nights).
+* [⏰ ProgressBar](http://progressbarwindows.com) - A Windows Taskbar app that shows your day and year progress, also [🥇 #1 Product of the day on ProductHunt 🍾](https://www.producthunt.com/posts/progressbar).
+* [🥗 Seasonal Foods](https://twitter.com/seasonalfoods3) - A Twitter bot that tells you which fruit and veg is currently in season.
+* [🎙 London Standup Comedy Map](https://apuchitnis.github.io/open-mic-nights) - Find free and paid comedy nights to perform at in London. 
 
 Find my favourite programming memes on [Twitter](https://twitter.com/apuchitnis), or on [LinkedIn](https://www.linkedin.com/in/apuchitnis).
 
