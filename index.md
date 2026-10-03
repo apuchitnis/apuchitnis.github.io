@@ -1,3 +1,8 @@
+---
+layout: default
+image: /images/apu-small.jpg
+---
+
 ## Hey folks, I'm Apu 👋
 
 I'm co-founder & CTO at [koodos](https://koodos.com), where we build [Shelf](https://www.shelf.im/): a home for your digital self, used by millions of people on [iOS](https://apps.apple.com/us/app/shelf-music-books-movies/id1667391175) and [Android](https://play.google.com/store/apps/details?id=com.koodos.shelf). Before that I founded Sidetrack, led teams at [Improbable](https://www.improbable.io/) and studied engineering at Cambridge.

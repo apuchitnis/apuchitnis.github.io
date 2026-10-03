@@ -1,0 +1,9 @@
+{%- comment -%} Maps a section heading id from index.md to its note name in the wiki. {%- endcomment -%}
+{%- if include.sid contains 'building' -%}personal-context
+{%- elsif include.sid contains 'talks' -%}talks
+{%- elsif include.sid contains 'writing' -%}writing
+{%- elsif include.sid contains 'side' -%}side-projects
+{%- elsif include.sid contains 'say' -%}say-hi
+{%- elsif include.sid contains 'links' -%}sources
+{%- else -%}{{ include.sid | slugify }}
+{%- endif -%}
