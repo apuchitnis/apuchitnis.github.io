@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👋</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+  {% if site.google_analytics %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+  {% endif %}
+</head>
+<body>
+{%- comment -%}
+  index.md is the only content file. Its intro becomes index.md in the vault, and each
+  "### " section becomes a note (see _includes/note-name.html for the names).
+{%- endcomment -%}
+{% assign parts = content | split: '<h3' %}
+<div class="app">
+  <header class="topbar">
+    <span class="dots" aria-hidden="true"><i class="r"></i><i class="y"></i><i class="g"></i></span>
+    <span class="vault">🗂 apu-wiki</span>
+    <nav class="tabs" aria-label="Notes">
+      <a class="tab" href="#index" data-note="index">index.md</a>
+      {% for part in parts offset:1 %}
+        {% assign sid = part | split: 'id="' %}{% assign sid = sid[1] | split: '"' | first %}
+        {% capture nm %}{% include note-name.html sid=sid %}{% endcapture %}
+        <a class="tab" href="#{{ nm }}" data-note="{{ nm }}">{{ nm }}.md</a>
+      {% endfor %}
+    </nav>
+    <label class="ask">
+      <input id="q" type="search" placeholder="Search my wiki…" autocomplete="off" aria-label="Search notes">
+      <kbd>⌘K</kbd>
+    </label>
+  </header>
+
+  <aside class="files" aria-label="Explorer">
+    <p class="pane-title">Explorer</p>
+    <ul class="tree">
+      <li class="dir">▾ apu-wiki</li>
+      <li class="file in1" data-note="index"><a href="#index">📄 index.md</a></li>
+      <li class="dir in1">▾ wiki</li>
+      {% for part in parts offset:1 %}
+        {% assign sid = part | split: 'id="' %}{% assign sid = sid[1] | split: '"' | first %}
+        {% capture nm %}{% include note-name.html sid=sid %}{% endcapture %}
+        {% unless nm == 'sources' %}<li class="file in2" data-note="{{ nm }}"><a href="#{{ nm }}">📄 {{ nm }}.md</a></li>{% endunless %}
+      {% endfor %}
+      <li class="dir in1">▾ raw</li>
+      <li class="file in2" data-note="sources"><a href="#sources">📎 sources.md</a></li>
+      <li class="file in2 ghost">🖼 apu.jpg</li>
+      <li class="file in1 ghost">⚙️ CLAUDE.md</li>
+      <li class="file in1 ghost">🕓 log.md</li>
+    </ul>
+  </aside>
+
+  <main class="notes">
+    <article class="note" id="index" data-name="index">
+      <div class="note-path">
+        <span class="prompt"><span class="ps1">apu@nyc</span>:<span class="cwd">~/apu-wiki</span>$ <span class="cmd">whoami</span></span>
+        <span class="meta" data-links></span>
+      </div>
+      <div class="fm-wrap">
+<pre class="frontmatter"><span class="dash">---</span>
+<span class="k">title:</span> <span class="v">Apu Chitnis</span>
+<span class="k">aliases:</span> <span class="s">[Apu, Apurva]</span>
+<span class="k">role:</span> <span class="v">co-founder &amp; CTO @ koodos</span>
+<span class="k">building:</span> <span class="s">[[Shelf]], [[personal-context]]</span>
+<span class="k">based:</span> <span class="v">New York City</span>
+<span class="k">tags:</span> <span class="s">[engineer, founder, stand-up]</span>
+<span class="k">updated:</span> <span class="v">{{ site.time | date: '%Y-%m-%d' }}</span>
+<span class="dash">---</span></pre>
+        <figure class="embed">
+          <img src="{{ site.logo | relative_url }}" alt="Apu Chitnis">
+          <figcaption>![[apu.jpg]]</figcaption>
+        </figure>
+      </div>
+      <div class="note-body">{{ parts | first }}</div>
+    </article>
+
+    {% for part in parts offset:1 %}
+      {% assign sid = part | split: 'id="' %}{% assign sid = sid[1] | split: '"' | first %}
+      {% capture nm %}{% include note-name.html sid=sid %}{% endcapture %}
+      {% if nm == 'sources' %}{% assign cmd = 'less raw/sources.md' %}
+      {% elsif nm == 'say-hi' %}{% assign cmd = 'ping apu' %}
+      {% else %}{% capture cmd %}cat wiki/{{ nm }}.md{% endcapture %}{% endif %}
+      <article class="note{% if nm == 'sources' %} raw{% endif %}" id="{{ nm }}" data-name="{{ nm }}">
+        <div class="note-path">
+          <span class="prompt"><span class="ps1">apu@nyc</span>:<span class="cwd">~/apu-wiki</span>$ <span class="cmd">{{ cmd }}</span></span>
+          <span class="meta" data-links></span>
+        </div>
+        <div class="note-body"><h3{{ part }}</div>
+      </article>
+    {% endfor %}
+
+    <p class="empty" id="empty" hidden>
+      <span class="ps1">apu@nyc</span>:<span class="cwd">~/apu-wiki</span>$ grep -ri "<span id="empty-q"></span>" .<br>
+      no matches. <a href="https://calendly.com/apuchitnis">ask me directly →</a>
+    </p>
+    <p class="end-prompt"><span class="ps1">apu@nyc</span>:<span class="cwd">~/apu-wiki</span>$ <span class="cursor">▋</span></p>
+  </main>
+
+  <aside class="side" aria-label="Graph and outline">
+    <section class="panel">
+      <p class="pane-title">Graph view</p>
+      <svg id="graph" viewBox="0 0 300 280" role="img" aria-label="Graph of notes and their links"></svg>
+    </section>
+    <section class="panel">
+      <p class="pane-title">Outline</p>
+      <ul class="outline">
+        <li data-note="index"><a href="#index">index</a></li>
+        {% for part in parts offset:1 %}
+          {% assign sid = part | split: 'id="' %}{% assign sid = sid[1] | split: '"' | first %}
+          {% capture nm %}{% include note-name.html sid=sid %}{% endcapture %}
+          <li data-note="{{ nm }}"><a href="#{{ nm }}">{{ nm }}</a></li>
+        {% endfor %}
+      </ul>
+    </section>
+    <section class="panel">
+      <p class="pane-title">Tags</p>
+      <div class="tags"><span>#cto</span><span>#founder</span><span>#personal-context</span><span>#agents</span><span>#shelf</span><span>#nyc</span><span>#stand-up</span></div>
+    </section>
+  </aside>
+
+  <footer class="statusbar">
+    <span class="ok">● synced</span>
+    <span id="stat-notes"></span>
+    <span id="stat-links"></span>
+    <span>0 vector stores</span>
+    <span>compiled {{ site.time | date: '%b %-d, %Y' }}</span>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var notes = Array.prototype.slice.call(document.querySelectorAll('.note'));
+
+  // Link counts per note and in the status bar.
+  var total = 0;
+  notes.forEach(function (n) {
+    var c = n.querySelectorAll('.note-body a').length;
+    total += c;
+    n.querySelector('[data-links]').textContent = '🔗 ' + c + (c === 1 ? ' link' : ' links');
+  });
+  document.getElementById('stat-notes').textContent = notes.length + ' notes';
+  document.getElementById('stat-links').textContent = total + ' links';
+
+  // Graph view: apu at the centre, one node per note, a few leaves per note from its links.
+  var svg = document.getElementById('graph'), NS = 'http://www.w3.org/2000/svg';
+  var cx = 150, cy = 140, edges = [], nodes = [], sections = notes.slice(1);
+  function ring(i, rx, ry, da) {
+    var a = -Math.PI / 2 + i * 2 * Math.PI / sections.length + (da || 0);
+    return [cx + Math.cos(a) * rx, cy + Math.sin(a) * ry];
+  }
+  nodes.push({ x: cx, y: cy, r: 9, cls: 'hub', label: 'apu' });
+  sections.forEach(function (n, i) {
+    var p = ring(i, 72, 68), next = ring(i + 1, 72, 68);
+    edges.push([cx, cy, p[0], p[1], 'e1'], [p[0], p[1], next[0], next[1], 'e3']);
+    var links = Array.prototype.slice.call(n.querySelectorAll('.note-body a'), 0, 4);
+    links.forEach(function (l, j) {
+      var q = ring(i, 122, 118, (j - (links.length - 1) / 2) * 0.26);
+      edges.push([p[0], p[1], q[0], q[1], 'e2']);
+      nodes.push({ x: q[0], y: q[1], r: 3, cls: 'leaf', title: l.textContent });
+    });
+    nodes.push({ x: p[0], y: p[1], r: 6, cls: 'sec', label: n.dataset.name, note: n.dataset.name });
+  });
+  edges.forEach(function (e) {
+    var l = document.createElementNS(NS, 'line');
+    l.setAttribute('x1', e[0]); l.setAttribute('y1', e[1]); l.setAttribute('x2', e[2]); l.setAttribute('y2', e[3]);
+    l.setAttribute('class', e[4]);
+    svg.appendChild(l);
+  });
+  nodes.forEach(function (n) {
+    var g = document.createElementNS(NS, n.note ? 'a' : 'g');
+    if (n.note) { g.setAttribute('href', '#' + n.note); g.setAttribute('data-note', n.note); }
+    var c = document.createElementNS(NS, 'circle');
+    c.setAttribute('cx', n.x); c.setAttribute('cy', n.y); c.setAttribute('r', n.r); c.setAttribute('class', n.cls);
+    if (n.title) { var t = document.createElementNS(NS, 'title'); t.textContent = n.title; c.appendChild(t); }
+    g.appendChild(c);
+    if (n.label) {
+      var tx = document.createElementNS(NS, 'text');
+      tx.setAttribute('x', n.x); tx.setAttribute('y', n.y + n.r + 11); tx.setAttribute('text-anchor', 'middle');
+      tx.setAttribute('class', n.cls === 'hub' ? 'lbl hub-l' : 'lbl');
+      tx.textContent = n.label;
+      g.appendChild(tx);
+    }
+    svg.appendChild(g);
+  });
+
+  // Highlight the note you're reading in the tabs, explorer, outline and graph.
+  var markers = document.querySelectorAll('[data-note]');
+  function setActive(name) {
+    for (var i = 0; i < markers.length; i++) markers[i].classList.toggle('active', markers[i].getAttribute('data-note') === name);
+  }
+  setActive('index');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) setActive(e.target.dataset.name); });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    notes.forEach(function (n) { io.observe(n); });
+  }
+
+  // Search: filter notes by text. ⌘K, Ctrl+K or / to focus, Esc to clear.
+  var q = document.getElementById('q'), empty = document.getElementById('empty');
+  q.addEventListener('input', function () {
+    var term = q.value.trim().toLowerCase(), shown = 0;
+    notes.forEach(function (n) {
+      var hit = !term || n.textContent.toLowerCase().indexOf(term) !== -1;
+      n.hidden = !hit;
+      if (hit) shown++;
+    });
+    empty.hidden = shown > 0;
+    document.getElementById('empty-q').textContent = q.value;
+  });
+  document.addEventListener('keydown', function (e) {
+    if ((e.key === 'k' && (e.metaKey || e.ctrlKey)) || (e.key === '/' && document.activeElement !== q)) {
+      e.preventDefault(); q.focus(); q.select();
+    } else if (e.key === 'Escape' && document.activeElement === q) {
+      q.value = ''; q.dispatchEvent(new Event('input')); q.blur();
+    }
+  });
+})();
+</script>
+</body>
+</html>
