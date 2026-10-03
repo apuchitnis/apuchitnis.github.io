@@ -5,7 +5,7 @@ image: /images/apu-small.jpg
 
 ## Hey folks, I'm Apu 👋
 
-I'm co-founder & CTO at [koodos](https://koodos.com), where we build [Shelf](https://www.shelf.im/): a home for your digital self, used by millions of people on [iOS](https://apps.apple.com/us/app/shelf-music-books-movies/id1667391175) and [Android](https://play.google.com/store/apps/details?id=com.koodos.shelf). Before that I founded Sidetrack, led teams at [Improbable](https://www.improbable.io/) and studied engineering at Cambridge.
+I'm co-founder & CTO at [koodos](https://koodos.com), where we build [Shelf](https://www.shelf.im/): a home for your digital self, used by millions of people on [iOS](https://apps.apple.com/us/app/shelf-music-books-movies/id1667391175) and [Android](https://play.google.com/store/apps/details?id=com.koodos.shelf). Before that I founded Sidetrack, an Entrepreneur First-backed startup reining in out-of-control cloud compute costs, led teams at [Improbable](https://www.improbable.io/) and studied engineering at Cambridge.
 
 Engineer by day 🛠, clown/stand-up comedian by night 🎙, based in New York City 🗽
 
@@ -28,11 +28,10 @@ Plus tech on [Technically Thinking](https://technicallythinking.substack.com) an
 
 ### 🧪 Side projects
 * [⏰ ProgressBar](https://www.producthunt.com/posts/progressbar) – a Windows taskbar app that shows your day and year progress. Product Hunt's Golden Kitty Product of the Year 🥇
-* [🥗 Seasonal Foods](https://x.com/seasonalfoods3) – a bot that tells you which fruit and veg is in season
 * [🎙 London Standup Comedy Map](https://apuchitnis.github.io/open-mic-nights) – free and paid comedy nights to perform at in London
 
 ### 👋 Say hi
-I love to help where I can, especially mentoring folks who are underrepresented or early-career. I've mentored on First Round's Fast Track and judged startups at MassChallenge. [Grab time with me](https://calendly.com/apuchitnis), or find me (and my favourite programming memes) on [X](https://x.com/apuchitnis) and [LinkedIn](https://www.linkedin.com/in/apuchitnis).
+I love to help where I can, especially mentoring folks who are underrepresented or early-career. I've mentored founders at SXSW and on First Round's Fast Track, and judged startups at MassChallenge and MIT Reality Hack. [Grab time with me](https://calendly.com/apuchitnis), or find me (and my favourite programming memes) on [X](https://x.com/apuchitnis) and [LinkedIn](https://www.linkedin.com/in/apuchitnis).
 
 ### 🔗 All the links
 * **Talks:** [Supabase Select agenda](https://select.supabase.com/) · [Owners Not Renters announcement](https://newsletter.ownersnotrenters.com/p/owners-not-renters-livestream-episode-8a2) · [koodos x Mozilla](https://koodos.com/news/mozilla-koodos-team-up-on-new-paper)
